@@ -11,6 +11,14 @@
 - `.htaccess`: www und kanzleiwelten.ch → kanzleiwelten.com, alte WordPress-Adressen → neue Seiten (301), Sicherheits-Kopfzeilen.
 - Bilder: `img/team/` (quadratisch zugeschnitten aus `../alte-website/bilder/`), `img/site/` (Logo, Relief Bern).
 
+## Vorschau für Bernhard (GitHub Pages)
+
+**https://stefanhitz.github.io/kanzleiwelten-website/** – seit 2026-11-19. Wird bei jedem Push auf `main` automatisch
+neu erstellt (`.github/workflows/vorschau.yml`): Pfade auf den Unterordner angepasst, Balken «Entwurf zur Ansicht»,
+`noindex` (nicht in Google). Kontaktformular funktioniert dort nicht (kein PHP). Repository dafür seit 2026-11-19
+**öffentlich** (Entscheid Stefan; GitHub-Konto ohne Pro, Pages nur für öffentliche Repos). Nach dem Aufschalten bei
+Hostpoint: Pages abschalten (Settings → Pages) und Repo wieder privat stellen.
+
 ## Lokal ansehen und testen
 
 ```bash
