@@ -37,6 +37,8 @@
 :root {
   --color-primary: #023671;      /* Blau aus dem Logo */
   --color-primary-dark: #012550;
+  --color-deep: #253f54;         /* gedecktes Schieferblau wie auf der alten Startseite */
+  --color-deep-dark: #1c3142;
   --color-accent: #9c7b4f;       /* gedecktes Bronze, sparsam eingesetzt */
   --color-bg: #ffffff;
   --color-bg-alt: #f3f5f8;
@@ -74,7 +76,7 @@ img { max-width: 100%; height: auto; }
 
 /* ---------- Kopf ---------- */
 header.site-header { background: #fff; border-bottom: 1px solid var(--color-border); position: relative; z-index: 5; }
-.topbar { background: var(--color-primary); color: #fff; font-size: 13px; }
+.topbar { background: var(--color-deep-dark); color: #fff; font-size: 13px; }
 .topbar-inner { max-width: var(--max-width); margin: 0 auto; padding: 6px 20px; display: flex; gap: 20px; justify-content: flex-end; flex-wrap: wrap; }
 .topbar a { color: #fff; text-decoration: none; }
 .topbar a:hover { text-decoration: underline; }
@@ -118,7 +120,7 @@ header.site-header { background: #fff; border-bottom: 1px solid var(--color-bord
 
 /* Startbild mit Berner Altstadt-Relief aus dem bisherigen Auftritt */
 .hero {
-  background: var(--color-primary) url('/img/site/bern-relief.jpg') center bottom / cover no-repeat;
+  background: var(--color-deep) url('/img/site/bern-relief.jpg') center bottom / cover no-repeat;
   background-blend-mode: soft-light;
   color: #fff; padding: 80px 0 72px;
 }
@@ -163,7 +165,7 @@ a.card:hover { box-shadow: 0 10px 24px rgba(2,54,113,.10); transform: translateY
 .service-nav a { font-size: 14px; text-decoration: none; border: 1px solid var(--color-border); border-radius: 20px; padding: 4px 12px; background: #fff; }
 .service-nav a.active { background: var(--color-primary); color: #fff; border-color: var(--color-primary); }
 
-.cta { background: var(--color-primary); color: #fff; border-radius: var(--radius); padding: 32px; display: flex; gap: 24px; align-items: center; justify-content: space-between; flex-wrap: wrap; }
+.cta { background: var(--color-deep); color: #fff; border-radius: var(--radius); padding: 32px; display: flex; gap: 24px; align-items: center; justify-content: space-between; flex-wrap: wrap; }
 .cta h2 { color: #fff; margin: 0 0 4px; font-size: 24px; }
 .cta p { margin: 0; color: rgba(255,255,255,.85); }
 
@@ -203,7 +205,7 @@ a.card:hover { box-shadow: 0 10px 24px rgba(2,54,113,.10); transform: translateY
 .legal h2 { font-size: 20px; margin-top: 1.6em; }
 
 /* ---------- Fuss ---------- */
-footer.site-footer { background: var(--color-primary-dark); color: rgba(255,255,255,.85); font-size: 14px; margin-top: 0; }
+footer.site-footer { background: var(--color-deep-dark); color: rgba(255,255,255,.85); font-size: 14px; margin-top: 0; }
 .footer-inner { max-width: var(--max-width); margin: 0 auto; padding: 40px 20px 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 28px; }
 .footer-inner img { height: 40px; width: auto; }
 footer.site-footer h3 { color: #fff; font-family: var(--font-body); font-size: 14px; text-transform: uppercase; letter-spacing: .08em; }
