@@ -1,0 +1,50 @@
+# Vorschau der Website auf GitHub Pages (zum Zeigen an Bernhard, bevor die Seite bei Hostpoint online geht).
+# Die Seiten verwenden Pfade ab Wurzel ("/css/..."). GitHub Pages liegt aber unter /kanzleiwelten-website/,
+# deshalb werden die Pfade hier beim Veröffentlichen angepasst. Die Quelldateien bleiben unverändert.
+# Zusätzlich: Hinweisbalken «Entwurf», keine Aufnahme in Suchmaschinen.
+name: Vorschau
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  vorschau:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Vorschau zusammenstellen
+        run: |
+          BASE="/${GITHUB_REPOSITORY#*/}"
+          mkdir _site
+          cp -r *.html en css js img fonts partials favicon.ico apple-touch-icon.png _site/
+          cd _site
+          # Pfade ab Wurzel auf den Unterordner von GitHub Pages umbiegen
+          find . -name '*.html' -print0 | xargs -0 sed -i -E \
+            -e "s#(href|src|action|data-include|data-alt)=\"/#\1=\"$BASE/#g"
+          sed -i -E "s#url\('/#url('$BASE/#g" css/style.css
+          sed -i -E "s#fetch\('/kontakt.php#fetch('$BASE/kontakt.php#" js/contact-form-ui.js
+          # Kein Eintrag in Suchmaschinen, Hinweisbalken oben auf jeder Seite
+          find . -name '*.html' -not -path './partials/*' -print0 | xargs -0 sed -i -E \
+            -e 's#<meta charset="utf-8">#<meta charset="utf-8">\n<meta name="robots" content="noindex, nofollow">#' \
+            -e 's#(<body[^>]*>)#\1\n<div style="background:\#9c7b4f;color:\#fff;text-align:center;padding:8px 12px;font:600 14px system-ui,sans-serif">Entwurf zur Ansicht – noch nicht online. Das Kontaktformular funktioniert in dieser Vorschau nicht.</div>#'
+          printf 'User-agent: *\nDisallow: /\n' > robots.txt
+          touch .nojekyll
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - id: deploy
+        uses: actions/deploy-pages@v4
