@@ -1,0 +1,38 @@
+# Kanzlei Welten – Server-Regeln (Hostpoint, Apache)
+ErrorDocument 404 /404.html
+AddDefaultCharset UTF-8
+Options -Indexes
+
+RewriteEngine On
+
+# www und kanzleiwelten.ch -> https://kanzleiwelten.com (http->https erledigt Hostpoint)
+RewriteCond %{HTTP_HOST} ^www\.kanzleiwelten\.com$ [NC,OR]
+RewriteCond %{HTTP_HOST} ^(www\.)?kanzleiwelten\.ch$ [NC]
+RewriteRule ^(.*)$ https://kanzleiwelten.com/$1 [R=301,L]
+
+# Alte WordPress-Adressen (bis 2026) auf die neuen Seiten umleiten, damit Links
+# und Suchmaschinen-Einträge weiter funktionieren.
+RewriteRule ^(unsere-bueros)/?$ /ueber-uns.html [R=301,L]
+RewriteRule ^(kanzlei-welten)/?$ /dienstleistungen.html [R=301,L]
+RewriteRule ^(privatpersonen|vertragsrecht|erbschaft|investitionen-steuern|immobilien-und-baurecht|zivilprozesse-administrative-und-schiedsverfahren)/?$ /privatpersonen.html [R=301,L]
+RewriteRule ^(juristische-personen|rechtsberatung|ma-gesellschaftsrecht-strukturen-und-corporate-finance|inkasso-schuldbetreibungsverfahren-und-nachlassstundung|gruendung-reststrukturierung-und-liquidation|organfunktion-z-b-verwaltungsrat-sekretariat|administrative-und-gerichtsverfahren-schiedsgerichte|unternehmensberatung-buchhaltung-finanzen-und-steuern)/?$ /unternehmen.html [R=301,L]
+RewriteRule ^(buchhaltung-finanzen|accounting|it-und-steuern)/?$ /buchhaltung-steuern.html [R=301,L]
+RewriteRule ^(sport|beratung-von-verbaenden-clubs-athleten|schiedsgericht|tas-schiedsrichter|organfunktion|allgemeine-rechtsberatung-vereinsrecht)/?$ /sport.html [R=301,L]
+RewriteRule ^(family-office-services|behoerdenkontakt|trusts-stiftungen|vermoegensverwaltung-investitionen-kunst|rechtliches-und-steuern)/?$ /family-office.html [R=301,L]
+RewriteRule ^(team)/?$ /team.html [R=301,L]
+RewriteRule ^(offene-stellen|rechtsanwalt|praktikanten-rechtsanwalt|administration-treuhand)/?$ /stellen.html [R=301,L]
+RewriteRule ^(kontakt)/?$ /kontakt.html [R=301,L]
+RewriteRule ^en/(about-us)/?$ /en/about.html [R=301,L]
+RewriteRule ^en/(kanzlei-welten-2|it-taxes)/?$ /en/services.html [R=301,L]
+RewriteRule ^en/(team-2)/?$ /en/team.html [R=301,L]
+RewriteRule ^en/(career)/?$ /en/careers.html [R=301,L]
+RewriteRule ^en/(contact)/?$ /en/contact.html [R=301,L]
+
+# Sicherheits-Kopfzeilen
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+  Header always set Content-Security-Policy "default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src 'self'; form-action 'self'; frame-ancestors 'self'; base-uri 'self'"
+</IfModule>

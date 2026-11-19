@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kontakt – Kanzlei Welten, Bern</title>
+<meta name="description" content="Kontakt zur Kanzlei Welten, Weltpoststrasse 5, Bern: Telefon +41 31 318 41 41.">
+<link rel="alternate" hreflang="en" href="https://kanzleiwelten.com/en/contact.html">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body data-page="kontakt" data-alt="/en/contact.html">
+<div data-include="/partials/header.html"></div>
+
+<main id="inhalt">
+<section class="page-head">
+  <div class="container">
+    <h1>Kontakt</h1>
+    <p class="lead">Rufen Sie uns an, schreiben Sie uns eine E-Mail oder nutzen Sie das Kontaktformular.</p>
+  </div>
+</section>
+<section class="section">
+  <div class="container contact-grid">
+    <div>
+      <div class="contact-box">
+        <h2>Kanzlei Welten</h2>
+        <p>Weltpoststrasse 5<br>Postfach<br>3000 Bern 16</p>
+        <p>Telefon <a href="tel:+41313184141">+41 31 318 41 41</a><br>Fax +41 31 312 12 01<br>E-Mail <a href="mailto:bernhard.welten@kanzleiwelten.com">bernhard.welten@kanzleiwelten.com</a></p>
+      </div>
+      <div class="contact-box">
+        <h2>Anreise</h2>
+        <p><strong>Öffentlicher Verkehr:</strong> Tram Nr. 6 oder 8 ab Bahnhof Bern bis Haltestelle Egghölzli.</p>
+        <p><strong>Auto:</strong> Autobahn A6, Ausfahrt Bern-Ostring. Parkplätze sind vorhanden.</p>
+        <p><a href="https://www.openstreetmap.org/search?query=Weltpoststrasse%205%2C%203015%20Bern" rel="noopener">Auf der Karte anzeigen</a></p>
+      </div>
+    </div>
+    <div>
+      <h2>Kontaktformular</h2>
+      <p class="form-error" id="formError" role="alert" hidden>Bitte füllen Sie alle Pflichtfelder korrekt aus.</p>
+      <p class="form-error" id="linkError" role="alert" hidden>Aus Schutz vor Spam können wir keine Nachrichten mit Links zu anderen Websites annehmen. Bitte entfernen Sie die Links.</p>
+      <p class="form-error" id="jsError" role="alert" hidden>Ihre Nachricht konnte nicht gesendet werden, weil JavaScript deaktiviert ist. Bitte aktivieren Sie JavaScript oder kontaktieren Sie uns per Telefon oder E-Mail.</p>
+      <p class="form-error" id="expiredError" role="alert" hidden>Die Seite war zu lange geöffnet. Bitte senden Sie das Formular erneut ab.</p>
+      <p class="form-error" id="sendError" role="alert" hidden>Ihre Nachricht konnte leider nicht gesendet werden. Bitte versuchen Sie es später erneut oder kontaktieren Sie uns per Telefon oder E-Mail.</p>
+      <form id="contactForm" action="/kontakt.php" method="POST" novalidate>
+        <input type="text" name="website" class="honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <input type="hidden" name="_token" value="">
+        <input type="hidden" name="lang" value="de">
+        <div class="form-field"><label for="name">Name *</label><input type="text" id="name" name="name" autocomplete="name" required></div>
+        <div class="form-field"><label for="email">E-Mail *</label><input type="email" id="email" name="email" autocomplete="email" required></div>
+        <div class="form-field"><label for="telefon">Telefon</label><input type="tel" id="telefon" name="telefon" autocomplete="tel"></div>
+        <div class="form-field"><label for="betreff">Betreff</label><input type="text" id="betreff" name="betreff"></div>
+        <div class="form-field"><label for="nachricht">Ihre Nachricht *</label><textarea id="nachricht" name="nachricht" rows="6" required></textarea></div>
+        <p class="notice">Bitte senden Sie über dieses Formular keine vertraulichen Unterlagen und keine fristgebundenen Eingaben. Ein Mandat entsteht erst, wenn wir es Ihnen bestätigt haben.</p>
+        <p><small>* Pflichtfelder</small></p>
+        <button type="submit" class="btn">Nachricht senden</button>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<div data-include="/partials/footer.html"></div>
+<script type="module" src="/js/include.js"></script>
+<script type="module" src="/js/nav.js"></script>
+<script type="module" src="/js/contact-form-ui.js"></script>
+</body>
+</html>
