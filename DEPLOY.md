@@ -46,6 +46,7 @@ php tests/kontakt-php.test.php   # Formular-Server; braucht PHP (nicht installie
    SSL-Zertifikate durch Hostpoint ausstellen lassen.
 2. `scripts/upload-ordner.sh` ausführen, dann den INHALT von `../upload-hostpoint/` per SFTP (Cyberduck) in den Webroot hochladen: `*.html`, `en/`, `kontakt.php`, `.htaccess`, `robots.txt`, `sitemap.xml`,
    `favicon.ico`, `apple-touch-icon.png`, `css/`, `js/`, `img/`, `fonts/`, `partials/`.
+   **Achtung:** `.htaccess` ist im Finder unsichtbar (Cmd + Shift + . einblenden) und muss mit hoch.
    **Nicht** hochladen: `.git/`, `tests/`, `scripts/`, `docs/`, `package.json`, `DEPLOY.md`, `README.md`, `.gitignore`.
 3. `kontakt-secret.php` entsteht auf dem Server beim ersten Formularaufruf; nicht löschen, nicht im Git.
 4. Vorab über die Hostpoint-Vorschauadresse testen (alle Seiten, Formular, Umleitungen).
