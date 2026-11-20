@@ -31,7 +31,7 @@ php tests/kontakt-php.test.php   # Formular-Server; braucht PHP (nicht installie
 ## Vor dem Aufschalten (offen)
 
 - [ ] Texte und Team von Bernhard prüfen und freigeben lassen
-- [ ] Adresse klären: alte Website nennt «3000 Bern 15» (Startseite) und «3000 Bern 16» (Kontakt, Stellen) → hier 16 verwendet
+- [x] Adresse: «3000 Bern 16» ist richtig (bestätigt 2026-11-20)
 - [ ] Empfänger des Kontaktformulars bestätigen (`CONTACT_RECIPIENT` in `kontakt.php`, jetzt bernhard.welten@)
 - [ ] Bewerbungsadresse bestätigen (jetzt sekretariat@kanzleiwelten.com; alte Seite zeigte daniela.welten@, verlinkte aber sekretariat@)
 - [ ] Foto Franziska Kropf fehlt (Platzhalter mit Initialen)
