@@ -32,8 +32,9 @@ php tests/kontakt-php.test.php   # Formular-Server; braucht PHP (nicht installie
 
 - [ ] Texte und Team von Bernhard prüfen und freigeben lassen
 - [x] Adresse: «3000 Bern 16» ist richtig (bestätigt 2026-11-20)
-- [ ] Empfänger des Kontaktformulars bestätigen (`CONTACT_RECIPIENT` in `kontakt.php`, jetzt bernhard.welten@)
-- [ ] Bewerbungsadresse bestätigen (jetzt sekretariat@kanzleiwelten.com; alte Seite zeigte daniela.welten@, verlinkte aber sekretariat@)
+- [x] Alle Mailadressen auf der Website und im Formular: **info@kanzleiwelten.com** (Entscheid Stefan 2026-11-20, keine persönlichen Adressen)
+- [ ] Prüfen, dass info@kanzleiwelten.com in Bernhards Microsoft 365 existiert (Postfach, Alias oder Verteiler) und Mails ankommen
+- [x] Bewerbungen ebenfalls an info@kanzleiwelten.com
 - [ ] Foto Franziska Kropf fehlt (Platzhalter mit Initialen)
 - [x] Impressum: kein Handelsregistereintrag (Anwaltskanzlei, nicht eintragungspflichtig; bestätigt 2026-11-20) → keine UID im Impressum
 - [ ] PHP-Tests laufen lassen
@@ -48,7 +49,7 @@ php tests/kontakt-php.test.php   # Formular-Server; braucht PHP (nicht installie
    **Nicht** hochladen: `.git/`, `tests/`, `scripts/`, `docs/`, `package.json`, `DEPLOY.md`, `README.md`, `.gitignore`.
 3. `kontakt-secret.php` entsteht auf dem Server beim ersten Formularaufruf; nicht löschen, nicht im Git.
 4. Vorab über die Hostpoint-Vorschauadresse testen (alle Seiten, Formular, Umleitungen).
-5. **Mail-Versand des Formulars:** Absender ist `website@kanzleiwelten.com`, gesendet über Hostpoint. Damit die Mails
+5. **Mail-Versand des Formulars:** Absender ist `info@kanzleiwelten.com`, gesendet über Hostpoint. Damit die Mails
    DMARC bestehen, SPF bei Swizzonic ergänzen: `v=spf1 include:spf.protection.outlook.com include:spf.mail.hostpoint.ch -all`
    und Hostpoint-DKIM für kanzleiwelten.com einrichten (wie immohitz.ch). Danach DMARC-Berichte prüfen; erst dann `p=reject` möglich.
 6. A-Eintrag `kanzleiwelten.com` und `kanzleiwelten.ch` (inkl. www) bei Swizzonic auf die Hostpoint-Adresse ändern.

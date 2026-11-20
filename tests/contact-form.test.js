@@ -5,7 +5,7 @@ import { isValidEmail, isValidOptionalPhone, hasForeignLink, validateContactForm
 const valid = { name: 'Max Muster', email: 'max@example.com', telefon: '', nachricht: 'Guten Tag' };
 
 test('isValidEmail', () => {
-  assert.equal(isValidEmail('bernhard.welten@kanzleiwelten.com'), true);
+  assert.equal(isValidEmail('info@kanzleiwelten.com'), true);
   assert.equal(isValidEmail('abc'), false);
   assert.equal(isValidEmail('a@b'), false);
   assert.equal(isValidEmail(''), false);

@@ -4,8 +4,8 @@ declare(strict_types=1);
 // Empfänger und Absender der Formular-Mails. Absender muss eine Adresse der eigenen
 // Domain sein; damit die Mail DMARC besteht, muss der SPF-Eintrag von kanzleiwelten.com
 // den Versand über Hostpoint erlauben (siehe DEPLOY.md, Abschnitt Umstellung).
-const CONTACT_RECIPIENT = 'bernhard.welten@kanzleiwelten.com';
-const CONTACT_SENDER = 'website@kanzleiwelten.com';
+const CONTACT_RECIPIENT = 'info@kanzleiwelten.com';
+const CONTACT_SENDER = 'info@kanzleiwelten.com';
 const CONTACT_SECRET_FILE = __DIR__ . '/kontakt-secret.php';
 const CONTACT_MIN_SECONDS = 3;
 const CONTACT_MAX_SECONDS = 86400;
