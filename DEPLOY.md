@@ -33,7 +33,7 @@ php tests/kontakt-php.test.php   # Formular-Server; braucht PHP (nicht installie
 - [ ] Texte und Team von Bernhard prüfen und freigeben lassen
 - [x] Adresse: «3000 Bern 16» ist richtig (bestätigt 2026-11-20)
 - [x] Alle Mailadressen auf der Website und im Formular: **info@kanzleiwelten.com** (Entscheid Stefan 2026-11-20, keine persönlichen Adressen)
-- [ ] Prüfen, dass info@kanzleiwelten.com in Bernhards Microsoft 365 existiert (Postfach, Alias oder Verteiler) und Mails ankommen
+- [x] info@kanzleiwelten.com existiert und geht an Bernhard (bestätigt Stefan 2026-11-20)
 - [x] Bewerbungen ebenfalls an info@kanzleiwelten.com
 - [ ] Foto Franziska Kropf fehlt (Platzhalter mit Initialen)
 - [x] Impressum: kein Handelsregistereintrag (Anwaltskanzlei, nicht eintragungspflichtig; bestätigt 2026-11-20) → keine UID im Impressum
