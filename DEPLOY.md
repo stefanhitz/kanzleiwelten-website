@@ -54,3 +54,6 @@ php tests/kontakt-php.test.php   # Formular-Server; braucht PHP (nicht installie
 6. A-Eintrag `kanzleiwelten.com` und `kanzleiwelten.ch` (inkl. www) bei Swizzonic auf die Hostpoint-Adresse ändern.
    MX, SPF (ausser Ergänzung oben), DMARC und Microsoft-Einträge **nicht** anfassen. DNSSEC bleibt bei Swizzonic, kein Problem.
 7. Nach der Umstellung: Live-Prüfung, Testanfrage über das Formular, alte Adressen (z. B. `/team/`) leiten um.
+8. Besucherzahlen: aus den Hostpoint-Server-Protokollen (Websites → kanzleiwelten.com → Logs), ohne Skript, Datenschutz-
+   erklärung deckt das bereits ab. Logaholic (wie anettehitz.ch) nur auf Wunsch; dann Skript, CSP in `.htaccess` und
+   Datenschutzerklärung ergänzen. Entscheid Stefan offen (Empfehlung: Server-Protokolle).
