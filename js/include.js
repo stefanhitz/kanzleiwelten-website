@@ -11,7 +11,7 @@ function rehydrateScripts(fragment) {
 async function loadPartial(el) {
   const url = el.getAttribute('data-include');
   try {
-    const res = await fetch(url);
+    const res = await fetch(url, { cache: 'no-cache' }); // immer aktuelle Kopf-/Fusszeile
     if (!res.ok) throw new Error(`HTTP ${res.status} ${res.statusText}`);
     const tpl = document.createElement('template');
     tpl.innerHTML = await res.text();
