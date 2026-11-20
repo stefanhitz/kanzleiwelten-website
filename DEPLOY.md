@@ -35,7 +35,7 @@ php tests/kontakt-php.test.php   # Formular-Server; braucht PHP (nicht installie
 - [x] Alle Mailadressen auf der Website und im Formular: **info@kanzleiwelten.com** (Entscheid Stefan 2026-11-20, keine persönlichen Adressen)
 - [x] info@kanzleiwelten.com existiert und geht an Bernhard (bestätigt Stefan 2026-11-20)
 - [x] Bewerbungen (Offene Stellen, de/en) an sekretariat@kanzleiwelten.com (Entscheid Stefan 2026-11-20), sonst überall info@
-- [ ] Foto Franziska Kropf fehlt (Platzhalter mit Initialen)
+- [x] Foto Franziska Kropf: keines vorhanden, Initialen bleiben (Entscheid 2026-11-20)
 - [x] Impressum: kein Handelsregistereintrag (Anwaltskanzlei, nicht eintragungspflichtig; bestätigt 2026-11-20) → keine UID im Impressum
 - [ ] PHP-Tests laufen lassen
 - [ ] Hostpoint-Hosting bestellen (Konto und Bezahlung mit Bernhard klären)
@@ -44,7 +44,7 @@ php tests/kontakt-php.test.php   # Formular-Server; braucht PHP (nicht installie
 
 1. Bei Hostpoint Hosting einrichten, Domains kanzleiwelten.com und kanzleiwelten.ch als «extern verwaltet» hinzufügen,
    SSL-Zertifikate durch Hostpoint ausstellen lassen.
-2. Per SFTP (Cyberduck) in den Webroot hochladen: `*.html`, `en/`, `kontakt.php`, `.htaccess`, `robots.txt`, `sitemap.xml`,
+2. `scripts/upload-ordner.sh` ausführen, dann den INHALT von `../upload-hostpoint/` per SFTP (Cyberduck) in den Webroot hochladen: `*.html`, `en/`, `kontakt.php`, `.htaccess`, `robots.txt`, `sitemap.xml`,
    `favicon.ico`, `apple-touch-icon.png`, `css/`, `js/`, `img/`, `fonts/`, `partials/`.
    **Nicht** hochladen: `.git/`, `tests/`, `scripts/`, `docs/`, `package.json`, `DEPLOY.md`, `README.md`, `.gitignore`.
 3. `kontakt-secret.php` entsteht auf dem Server beim ersten Formularaufruf; nicht löschen, nicht im Git.
