@@ -35,7 +35,7 @@ php tests/kontakt-php.test.php   # Formular-Server; braucht PHP (nicht installie
 - [ ] Empfänger des Kontaktformulars bestätigen (`CONTACT_RECIPIENT` in `kontakt.php`, jetzt bernhard.welten@)
 - [ ] Bewerbungsadresse bestätigen (jetzt sekretariat@kanzleiwelten.com; alte Seite zeigte daniela.welten@, verlinkte aber sekretariat@)
 - [ ] Foto Franziska Kropf fehlt (Platzhalter mit Initialen)
-- [ ] Impressum: Rechtsform / UID der Kanzlei, falls im Handelsregister eingetragen (nicht gefunden)
+- [x] Impressum: kein Handelsregistereintrag (Anwaltskanzlei, nicht eintragungspflichtig; bestätigt 2026-11-20) → keine UID im Impressum
 - [ ] PHP-Tests laufen lassen
 - [ ] Hostpoint-Hosting bestellen (Konto und Bezahlung mit Bernhard klären)
 
