@@ -146,10 +146,10 @@ a.card:hover { box-shadow: 0 10px 24px rgba(2,54,113,.10); transform: translateY
 .card p { margin: 0; color: var(--color-text-light); font-size: 15px; }
 .card .more { display: inline-block; margin-top: 12px; font-weight: 600; color: var(--color-primary); font-size: 14px; }
 
-.profile { display: grid; grid-template-columns: 280px 1fr; gap: 40px; align-items: start; }
+.profile { display: grid; grid-template-columns: 260px 1fr; gap: 40px; align-items: start; }
 .profile img { width: 100%; border-radius: var(--radius); display: block; }
 .profile ul { padding-left: 1.2em; }
-@media (max-width: 720px) { .profile { grid-template-columns: 1fr; } .profile img { max-width: 280px; } }
+@media (max-width: 720px) { .profile { grid-template-columns: 1fr; } .profile img { max-width: 260px; } }
 
 .facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
 .fact { border-left: 3px solid var(--color-accent); padding: 4px 0 4px 16px; }
